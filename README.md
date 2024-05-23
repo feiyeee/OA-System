@@ -5,9 +5,12 @@ An Office Automation System. I save here for learning Javaweb.
 
 项目模块说明：
 1. `oa`：使用纯Servlet搭建OA系统，进行单表的CRUD操作，在后端程序中写前端代码；
-2. `oa3`：使用Servlet + JSP 改造OA系统
+2. `oa02`：使用Servlet + JSP 改造OA系统
+3. `oa03`：使用session增加OA系统的安全登录、退出功能
 
-在使用代码前，先准备好数据库表（SQL脚本），代码中的数据库名为`Javaweb`
+
+
+数据库表（SQL脚本），数据库名为`Javaweb`
 ```SQL
 create database if not exists Javaweb;
 use `Javaweb`;
@@ -24,4 +27,25 @@ insert into dept(deptno, dname, loc) values(30, '技术部', '广州');
 insert into dept(deptno, dname, loc) values(40, '媒体部', '深圳');
 commit;
 select * from dept;
+
+# 用户表
+DROP TABLE IF EXISTS t_user;
+CREATE table t_user(
+	id INT PRIMARY KEY auto_increment,
+	username VARCHAR(255),
+	password VARCHAR(255)
+);
+INSERT INTO t_user(username, password) VALUES('admin', '123456');
+INSERT INTO t_user(username, password) VALUES('zhangsan', '123456');
+commit;
+SELECT * FROM t_user;
 ```
+
+
+
+版本说明：
+
+* JDK17
+* IDEA 2022.1.4
+* MySQL 8.0.27
+* Tomcat 10.0.12
