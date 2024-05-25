@@ -7,6 +7,7 @@ An Office Automation System. I save here for learning Javaweb.
 1. `oa`：使用纯Servlet搭建OA系统，进行单表的CRUD操作，在后端程序中写前端代码；
 2. `oa02`：使用Servlet + JSP 改造OA系统
 3. `oa03`：使用session增加OA系统的安全登录、退出功能
+4. `oa04`：使用Servlet + JSP + EL表达式 + JSTL标签改造OA系统
 
 
 
@@ -49,7 +50,3 @@ SELECT * FROM t_user;
 * IDEA 2022.1.4
 * MySQL 8.0.27
 * Tomcat 10.0.12
-
-
-
-Test
